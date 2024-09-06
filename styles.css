@@ -1,0 +1,19 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+header {
+ font-family:Georgia, serif;
+ text-align: center;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #006699;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
