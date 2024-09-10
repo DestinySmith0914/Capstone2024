@@ -17,11 +17,16 @@ function render(state = store.home) {
   router.updatePageLinks();
 }
 
-// render();
+ render(store.home);
 
 // add menu toggle to bars icon in nav bar
-document.querySelector(".fa-bars").addEventListener("click", () => {
-  document.querySelector("nav > ul").classList.toggle("hidden--mobile");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".fa-bars");
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      document.querySelector("nav > ul").classList.toggle("hidden--mobile");
+    });
+  }
 });
 
 router.hooks({
@@ -34,12 +39,11 @@ router.hooks({
     // Add a switch case statement to handle multiple routes
     switch (view) {
       // Add a case for each view that needs data from an API
-      case "":
+      case "itemsForSale":
         // New Axios get request utilizing already made environment variable
         axios
           .get(`https://fakestoreapi.com/products`)
-          .then(response => {(res=>res.json())
-            .then(json=>console.log(json))
+          .then(response => {store.itemsForSale.items = response.data;
             // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
             console.log("response", response);
             done();
