@@ -1,5 +1,5 @@
 export default {
-  header: "Items available",
+  header: "Store",
   view: "itemsForSale",
   items: []
 };
