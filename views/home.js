@@ -1,7 +1,8 @@
 import html from "html-literal";
 
-export default state => html`
+export default () => html`
   <section id="jumbotron">
-    <h2>Handmade knives, trinkets and more..</h2>
+    <h2>Welcome to The Forge</h2>
+    <p>Handcrafted knives, tools, and etc...</p>
   </section>
 `;
