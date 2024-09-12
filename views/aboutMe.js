@@ -30,11 +30,17 @@ export default () => html`
     <br />
     <h3>Here are some games I like to play!</h3>
     <ul id="bullets">
+      <br />
       <li>Red Dead Redemption 1 & 2</li>
+      <br />
       <li>Green hell</li>
+      <br />
       <li>Katamari Damacy</li>
+      <br />
       <li>Minecraft</li>
+      <br />
       <li>Dead Space</li>
+      <br />
     </ul>
   </section>
 `;

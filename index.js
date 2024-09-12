@@ -20,9 +20,11 @@ render(store.home);
 
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".fa-bars");
+  const menu = document.querySelector("nav > ul");
+
   if (menuToggle) {
     menuToggle.addEventListener("click", () => {
-      document.querySelector("nav > ul").classList.toggle("hidden--mobile");
+      menu.classList.toggle("hidden--mobile");
     });
   }
 });
