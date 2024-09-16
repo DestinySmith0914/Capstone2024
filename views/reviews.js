@@ -2,7 +2,7 @@ import html from "html-literal";
 
 export default state => html`
   <section id="reviews">
-    <form id="reviews" method="POST" action="">
+    <form id="reviews" method="POST" action="http://localhost:1234/reviews">
       <h2>Customer Reviews</h2>
       <div>
         <label for="name">Name:</label>
@@ -50,13 +50,12 @@ export default state => html`
       <input type="submit" name="submit" value="Submit Review" />
     </form>
     <div class="reviews-box">
-      <h2>Thing</h2>
       <table id="table">
         <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Review</th>
-          <th scope="col">Rating</th>
-          <th scope="col">Date</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
         </tr>
         ${state.reviews
           .map(reviews => {
